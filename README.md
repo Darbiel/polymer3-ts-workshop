@@ -1,6 +1,6 @@
-# Polymer 3 basic project
+# Polymer 3 project Workshop
 
-Polymer 3 based project with Pug and Typescript
+Polymer 3 based project for workshop with Pug and Typescript
 
 ### How to run
 

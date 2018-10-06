@@ -1,5 +1,5 @@
 {
-  "name": "polymer3-basic-typerscript-pug-project",
+  "name": "polymer3-ts-workshop",
   "version": "0.0.1",
   "author": {
     "name": "Michele Gallotti",
@@ -10,7 +10,7 @@
   "flat": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Darbiel/polymer3-basic-typerscript-pug-project"
+    "url": "https://github.com/Darbiel/polymer3-ts-workshop"
   },
   "scripts": {
     "start": "webpack-dev-server --open --config  ./webpack.dev.conf.js --mode=development",
