@@ -1,14 +1,18 @@
 {
     "columns": [
         {
-            "headerName": "Make",
-            "field": "make"
+            "headerName": "Nome",
+            "field": "name"
         },{
-            "headerName": "Model",
-            "field": "model"
+            "headerName": "Cognome",
+            "field": "surname"
         },{
-            "headerName": "Price",
-            "field": "price"
+            "headerName": "Luogo",
+            "field": "place"
+        },
+        {
+            "headerName": "Professione",
+            "field": "job"
         }
     ]
 }

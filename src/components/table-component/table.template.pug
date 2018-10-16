@@ -1,37 +1,67 @@
-table.tg
-    tbody
-        tr
-            th.tg-c3ow Results
-            th.tg-0pky
-            th.tg-0pky
-            th.tg-0pky
-            th.tg-0pky
-            th.tg-0pky
-        tr
-            td.tg-0pky No
-            td.tg-phtq Competition
-            td.tg-0pky John
-            td.tg-phtq Adam
-            td.tg-0pky Robert
-            td.tg-phtq Paul
-        tr
-            td.tg-0pky 1
-            td.tg-phtq Swimming
-            td.tg-dvpl 1:30
-            td.tg-ydyv 2:05
-            td.tg-dvpl 1:15
-            td.tg-ydyv 1:41
-        tr
-            td.tg-0pky 2
-            td.tg-phtq Running
-            td.tg-dvpl 15:30
-            td.tg-ydyv 14:10
-            td.tg-dvpl 15:45
-            td.tg-ydyv 16:00
-        tr
-            td.tg-0pky 3
-            td.tg-phtq Shooting
-            td.tg-dvpl 70%
-            td.tg-ydyv 55%
-            td.tg-dvpl 90%
-            td.tg-ydyv 88%
+style.
+    div.paleBlueRows {
+        font-family: "Times New Roman", Times, serif;
+        border: 1px solid #FFFFFF;
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    .divTable.paleBlueRows .divTableCell, .divTable.paleBlueRows .divTableHead {
+        border: 1px solid #FFFFFF;
+        padding: 3px 2px;
+    }
+    .divTable.paleBlueRows .divTableBody .divTableCell {
+        font-size: 13px;
+    }
+    .divTable.paleBlueRows .divTableRow:nth-child(even) {
+        background: #D0E4F5;
+    }
+    .divTable.paleBlueRows .divTableHeading {
+        background: #0B6FA4;
+        border-bottom: 5px solid #FFFFFF;
+    }
+    .divTable.paleBlueRows .divTableHeading .divTableHead {
+        font-size: 17px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        border-left: 2px solid #FFFFFF;
+    }
+    .divTable.paleBlueRows .divTableHeading .divTableHead:first-child {
+        border-left: none;
+    }
+    .paleBlueRows{
+        font-size: 14px;
+        font-weight: bold;
+        color: #333333;
+        background: #D0E4F5;
+        border-top: 3px solid #444444;
+    }
+    .paleBlueRows{
+        font-size: 14px;
+    }
+
+    .divTable{ display: table; }
+    .divTableRow { display: table-row; }
+    .divTableHeading { display: table-header-group;}
+    .divTableCell, .divTableHead { display: table-cell;}
+    .divTableHeading { display: table-header-group;}
+    .divTableBody { display: table-row-group;}
+
+.divTable.paleBlueRows
+    .divTableHeading
+        .divTableRow
+            template(is="dom-repeat", items="{{config.columns}}")
+                .divTableHead {{item.headerName}}
+    .divTableBody
+        template(is="dom-repeat", items="{{data}}")
+            .divTableRow
+                .divTableCell {{item.name}}
+                .divTableCell {{item.surname}}
+                .divTableCell {{item.place}}
+                .divTableCell {{item.job}}
+
+        .divTableRow
+            template(is="dom-repeat", items="{{config.columns}}")
+                .divTableCell

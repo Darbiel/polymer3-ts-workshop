@@ -1,17 +1,20 @@
 [
   {
-    "make": "Toyota",
-    "model": "Celica",
-    "price": 35000
+    "name": "Ubaldo",
+    "surname": "Utrini",
+    "place": "Parma",
+    "job": "Pensionato"
   },
   {
-    "make": "Ford",
-    "model": "Mondeo",
-    "price": 32000
+    "name": "Martina",
+    "surname": "Pieschi",
+    "place": "Asti",
+    "job": "Drammaturgo"
   },
   {
-    "make": "Porsche",
-    "model": "Boxter",
-    "price": 72000
+    "name": "Tiziano",
+    "surname": "Mantese",
+    "place": "Cento",
+    "job": "Educatore"
   }
 ]
