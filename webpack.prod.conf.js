@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -41,6 +42,37 @@ module.exports = {
                     {loader: 'raw-loader'},
                     {loader: 'pug-html-loader', options: {data: {}}}
                 ]
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    {
+                        loader: 'css-loader',
+                        options: {minimize: true, sourceMap: false, importLoader: 0}
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: false
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {minimize: true, sourceMap: false, importLoader: 0}
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: false
+                        }
+                    }
+                ],
             }
         ]
     },
