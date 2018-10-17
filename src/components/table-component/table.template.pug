@@ -55,12 +55,10 @@ style.
             template(is="dom-repeat", items="{{config.columns}}")
                 .divTableHead {{item.headerName}}
     .divTableBody
-        template(is="dom-repeat", items="{{data}}")
+        template(is="dom-repeat", items="{{getTablesRows(config.columns, data)}}")
             .divTableRow
-                .divTableCell {{item.name}}
-                .divTableCell {{item.surname}}
-                .divTableCell {{item.place}}
-                .divTableCell {{item.job}}
+                template(is="dom-repeat", items="{{item}}")
+                    .divTableCell {{item}}
 
         .divTableRow
             template(is="dom-repeat", items="{{config.columns}}")

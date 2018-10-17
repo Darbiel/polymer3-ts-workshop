@@ -14,10 +14,6 @@ export class TableComponent extends PolymerElement {
         super();
         this.data = dataMock;
         this.config = configMock;
-
-        console.log('LOGGGGGG', this.data);
-        console.log('LOGGGGGG', this.config);
-
     }
 
     static get template() {
@@ -26,6 +22,27 @@ export class TableComponent extends PolymerElement {
     }
 
     ready() {
-        super.ready()
+        super.ready();
+    }
+
+    getTablesRows(columns:Array<any>, values:Array<any>): Array<Array<any>>{
+
+        let results: Array<Array<any>> = [];
+
+        values.forEach((row) => {
+            let rows: Array<any> = [];
+            columns.forEach((column) => {
+                let value = row[column.field];
+                if(value){
+                    rows.push(value);
+                }else{
+                    rows.push('');
+                }
+            });
+            results.push(rows);
+        });
+
+        return results;
+
     }
 }

@@ -8,13 +8,11 @@
   {
     "name": "Martina",
     "surname": "Pieschi",
-    "place": "Asti",
-    "job": "Drammaturgo"
+    "place": "Asti"
   },
   {
     "name": "Tiziano",
     "surname": "Mantese",
-    "place": "Cento",
     "job": "Educatore"
   }
 ]
