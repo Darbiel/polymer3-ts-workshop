@@ -1,0 +1,5 @@
+div#multiselection
+    template(is="dom-repeat", items="{{data.values}}")
+        input(type="checkbox" checkbox-index$="{{index}}" id$="{{item.key}}" name$="{{item.key}}" checked$="{{item.checked}}" on-change="onChange")
+        label(for$="{{item.key}}") {{item.label}}
+        br

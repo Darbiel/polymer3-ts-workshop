@@ -53,7 +53,8 @@ style.
     .divTableHeading
         .divTableRow
             template(is="dom-repeat", items="{{config.columns}}")
-                .divTableHead {{item.headerName}}
+                template(is="dom-if", if="{{item.visible}}")
+                    .divTableHead {{item.headerName}}
     .divTableBody
         template(is="dom-repeat", items="{{getTablesRows(config.columns, data)}}")
             .divTableRow
@@ -62,4 +63,5 @@ style.
 
         .divTableRow
             template(is="dom-repeat", items="{{config.columns}}")
-                .divTableCell
+                template(is="dom-if", if="{{item.visible}}")
+                    .divTableCell

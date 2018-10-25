@@ -1,0 +1,26 @@
+{
+    "table": {
+        "columns": [
+            {
+                "headerName": "Nome",
+                "field": "name",
+                "visible": true
+            },
+            {
+                "headerName": "Cognome",
+                "field": "surname",
+                "visible": true
+            },
+            {
+                "headerName": "Luogo",
+                "field": "place",
+                "visible": true
+            },
+            {
+                "headerName": "Professione",
+                "field": "job",
+                "visible": true
+            }
+        ]
+    }
+}

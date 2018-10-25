@@ -1,10 +1,12 @@
 import * as kebabCase from "lodash/fp/kebabCase";
-import {BasicPolymerElement} from "./basic-component";
+import {BasicWidget} from "./basic-widget";
 import {TableComponent} from "./table-component";
+import {MultiselectionComponent} from "./multiselection-component";
 
 const elements = {
-    BasicPolymerElement,
-    TableComponent
+    TableComponent,
+    MultiselectionComponent,
+    BasicWidget
 };
 
 try {
