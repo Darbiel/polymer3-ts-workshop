@@ -28,7 +28,6 @@ export class BasicWidget extends PolymerElement {
 
     ready() {
         super.ready();
-        console.log('STOCAZZO');
         (this as any).addEventListener('on-checked-box', e => {
             e.stopPropagation();
         });
@@ -68,7 +67,6 @@ export class BasicWidget extends PolymerElement {
 
     convertFromTableToMultiselection(tableConf: any){
         let multiselectionData: any = {'values':[]};
-        console.log('LAMINCHIA', tableConf);
         tableConf.columns.forEach((singleConf) => {
           let newConf = {
               'label':singleConf.headerName,
