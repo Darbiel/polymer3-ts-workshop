@@ -5,11 +5,12 @@ import {html} from "@polymer/polymer/polymer-element";
 import * as view from "./widget.template.pug";
 import * as dataMock from "./mock/mockData.json";
 import * as configMock from "./mock/mockConfiguration.json";
+import {MultiselectionModel} from "../multiselection-component/models/multiselection";
+import {TableModel} from "../table-component/models/table";
+import {MultiselectDataModel} from "./models/multiselectData";
 
 
 export class BasicWidget extends PolymerElement {
-    private mockMultiSelect:any = {};
-
     private data: any = dataMock;
     private config: any = configMock;
 
@@ -37,11 +38,11 @@ export class BasicWidget extends PolymerElement {
     onCheckedBox(e){
         let detail = e.detail;
         let position: number = -1;
-        let columns: Array<any> = [];
+        let columns: Array<TableModel.IColumn> = [];
 
         this.config.table.columns.forEach((column, index) =>{
 
-            let newColumn = {
+            let newColumn: TableModel.IColumn = {
                 headerName: '',
                 field: '',
                 visible: false
@@ -66,9 +67,9 @@ export class BasicWidget extends PolymerElement {
 
 
     convertFromTableToMultiselection(tableConf: any){
-        let multiselectionData: any = {'values':[]};
+        let multiselectionData: MultiselectDataModel.IMultiselectData = {"values":[]};
         tableConf.columns.forEach((singleConf) => {
-          let newConf = {
+          let newConf: MultiselectionModel.IMultiselection = {
               'label':singleConf.headerName,
               'key':singleConf.field,
               'checked': singleConf.visible
